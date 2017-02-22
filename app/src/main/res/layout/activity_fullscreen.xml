@@ -1,0 +1,169 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#014C92"
+    tools:context="dimi3sinculotes.FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:id="@+id/activity_main">
+
+
+        <LinearLayout
+
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom"
+                android:backgroundTint="#ffffff"
+                android:id="@+id/btnLeft"
+                android:background="@drawable/bleft"
+                android:layout_below="@+id/nave"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/btnFire"
+                android:background="@drawable/fire"
+                android:layout_gravity="bottom"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nave"
+                android:background="@drawable/nave"
+                android:layout_above="@+id/btnRight"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:foreground="#ffffff"
+                android:id="@+id/barra"
+                android:layout_above="@+id/btnFire"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="PUNTUACION: 0000"
+                android:textSize="15dp"
+                android:textColor="#ffffff"
+                android:elegantTextHeight="true"
+                android:gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/fullscreen_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:keepScreenOn="true"
+                android:text= " "
+                android:textColor="#33b5e5"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:id="@+id/btnRight"
+                android:backgroundTint="#ffffff"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bright"
+                android:layout_gravity="bottom"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/btnLeft"
+                android:layout_below="@+id/barra"
+                android:elevation="0dp" />
+
+            <Button
+                android:text="Reiniciar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/botonReinicio"
+                android:layout_alignBaseline="@+id/fullscreen_content"
+                android:layout_alignBottom="@+id/fullscreen_content"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="21dp"
+                app:srcCompat="@drawable/vida"
+                android:id="@+id/vida1"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="21dp"
+                app:srcCompat="@drawable/vida"
+                android:id="@+id/vida2"
+                android:layout_below="@+id/textView"
+                android:layout_alignLeft="@+id/btnFire"
+                android:layout_alignStart="@+id/btnFire" />
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="21dp"
+                app:srcCompat="@drawable/vida"
+                android:id="@+id/vida3"
+                android:layout_marginRight="13dp"
+                android:layout_marginEnd="13dp"
+                android:layout_below="@+id/textView"
+                android:layout_toLeftOf="@+id/vida2"
+                android:layout_toStartOf="@+id/vida2" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:color/holo_red_light"
+                android:id="@+id/gameOver"
+                android:cropToPadding="false"
+                android:visibility="invisible"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">G6Sprint2</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_launch_screen">launchScreen</string>
+
+    <string name="title_activity_game_over">GameOverActivity</string>
+</resources>
